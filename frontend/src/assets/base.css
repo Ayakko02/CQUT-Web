@@ -1,0 +1,57 @@
+/* 全局重置和基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow-x: hidden;
+  background: #0a0e27;
+  height: 200vh;
+  color: white;
+}
+
+/* Vue应用根容器 */
+#app {
+  background: #0a0e27;
+  min-height: 100vh;
+}
+
+/* 页面容器基础样式 */
+.home-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0e27;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 4px;
+}
+
+/* 选中文字样式 */
+::selection {
+  background: #9333ea;
+  color: white;
+}
