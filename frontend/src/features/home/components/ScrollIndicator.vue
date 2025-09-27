@@ -9,13 +9,17 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 
 // Props
 const props = defineProps({
   isScrolledDown: {
     type: Boolean,
     default: false
+  },
+  scrollText: {
+    type: String,
+    default: ''
   }
 })
 
@@ -28,7 +32,7 @@ const scrollArrow = computed(() => {
 })
 
 const scrollText = computed(() => {
-  return props.isScrolledDown ? '返回零域' : '滚动查看溯洄（颠倒状态）'
+  return props.scrollText || (props.isScrolledDown ? '都说了不能点嘛！' : '这个不能点！')
 })
 
 // 方法
@@ -40,8 +44,8 @@ const handleScrollClick = () => {
 <style scoped>
 .scroll-indicator {
   position: fixed;
-  bottom: 30px;
-  left: 50%;
+  bottom: 55px;
+  left: 49.7%;
   transform: translateX(-50%);
   color: white;
   text-align: center;

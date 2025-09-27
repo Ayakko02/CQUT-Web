@@ -4,7 +4,7 @@
   <!-- 双城容器 - 包含翻转动画逻辑 -->
   <div class="dual-city-container" :class="containerClasses" id="dualCityContainer">
     <CityDivider />
-    <ZeroCity />
+    <ZeroCity :are-background-elements-hidden="areBackgroundElementsHidden" />
     <SuhuiCity />
   </div>
 </template>
@@ -17,7 +17,8 @@ import { computed } from 'vue'
 
 const props = defineProps({
   isFlipped: Boolean,
-  isTransitioning: Boolean
+  isTransitioning: Boolean,
+  areBackgroundElementsHidden: Boolean
 })
 
 const containerClasses = computed(() => {
@@ -37,11 +38,4 @@ const containerClasses = computed(() => {
   transition: transform 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.dual-city-container.flipped {
-  transform: rotate(180deg);
-}
-
-.dual-city-container.transitioning {
-  /* 过渡中的特殊样式 */
-}
 </style>

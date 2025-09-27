@@ -7,15 +7,17 @@ export function useCityTransition() {
     const isTransitioning = ref(false)
 
     const toggleCityTransition = () => {
-        if (isTransitioning.value) return // 防止重复点击
+        // 移除防重复点击的限制
+        // if (isTransitioning.value) return  // 删除这行
 
-        isTransitioning.value = true
+        // 每次点击都更新状态
         isFlipped.value = !isFlipped.value
+        isTransitioning.value = true
 
-        // 转换完成后重置状态
+        // 重新设置动画结束时间
         setTimeout(() => {
             isTransitioning.value = false
-        }, 2500) // 与CSS动画时间一致
+        }, 2500)
 
         return {
             newTheme: isFlipped.value ? 'suhui' : 'zero',
