@@ -1,9 +1,24 @@
-# 根组件 - Vue应用的根组件
-
+<!-- src/App.vue -->
 <template>
-  <router-view />
+  <div class="app">
+    <router-view />
+  </div>
 </template>
 
 <script setup>
-// App.vue 作为根组件，只需要 router-view
+// 使用 <script setup> 语法糖
 </script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.app {
+  min-height: 100vh;
+}
+</style>

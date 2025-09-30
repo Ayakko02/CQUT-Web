@@ -1,0 +1,344 @@
+{
+  "categories": [
+    { 
+      "id": 1, 
+      "name": "动漫知识", 
+      "type": "anime",
+      "icon": "fas fa-film", 
+      "color": "rgba(94, 23, 235, 0.7)",
+      "glowColor": "rgba(94, 23, 235, 0.5)",
+      "subcategories": [
+        {
+          "id": 11,
+          "name": "热血战斗",
+          "icon": "fas fa-fist-raised",
+          "questions": [
+            { 
+              "question": "《进击的巨人》中艾伦的巨人叫什么名字？", 
+              "answer": "进击的巨人、始祖巨人、战锤巨人（继承后）", 
+              "emoji": "😎",
+              "type": "normal",
+              "clubTip": "我们社团曾办过《进击的巨人》观影会，下次活动记得来哦！"
+            },
+            { 
+              "question": "《火影忍者》中漩涡鸣人的父亲是谁？", 
+              "answer": "波风水门（第四代火影）", 
+              "emoji": "👨‍👦",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "《鬼灭之刃》中灶门炭治郎的日轮刀是什么颜色？", 
+              "answer": "黑色", 
+              "emoji": "🔥",
+              "type": "normal",
+              "clubTip": "我们社团有成员cos过炭治郎，超还原！"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "校园日常",
+          "icon": "fas fa-school",
+          "questions": [
+            { 
+              "question": "《月刊少女野崎君》中野崎梅太郎的隐藏身份是什么？", 
+              "answer": "知名少女漫画家梦野咲子", 
+              "emoji": "📝",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "《辉夜大小姐想让我告白》的故事发生在哪个学校？", 
+              "answer": "秀知院学园", 
+              "emoji": "💌",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "科幻作品",
+          "icon": "fas fa-rocket",
+          "questions": [
+            { 
+              "question": "《攻壳机动队》中主角草薙素子的身体是什么状态？", 
+              "answer": "全身义体化", 
+              "emoji": "🤖",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "《EVA》中凌波丽的经典台词是什么？", 
+              "answer": "我会驾驶EVA", 
+              "emoji": "😐",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 2, 
+      "name": "游戏知识", 
+      "type": "game",
+      "icon": "fas fa-gamepad", 
+      "color": "rgba(0, 183, 255, 0.7)",
+      "glowColor": "rgba(0, 183, 255, 0.5)",
+      "subcategories": [
+        {
+          "id": 21,
+          "name": "主机游戏",
+          "icon": "fas fa-tv",
+          "questions": [
+            { 
+              "question": "《塞尔达传说：旷野之息》中 Link 的初始武器是什么？", 
+              "answer": "树枝", 
+              "emoji": "🌿",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "《最终幻想7》中克劳德的标志性武器是什么？", 
+              "answer": "破坏剑", 
+              "emoji": "⚔️",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "手机游戏",
+          "icon": "fas fa-mobile-alt",
+          "questions": [
+            { 
+              "question": "《原神》中旅行者的原名是什么？", 
+              "answer": "空（男）/荧（女）", 
+              "emoji": "✨",
+              "type": "normal",
+              "clubTip": "社团经常举办原神联机活动，一起来玩吧！"
+            },
+            { 
+              "question": "《王者荣耀》中哪个英雄是基于《火影忍者》中的角色设计的？", 
+              "answer": "不知火舞", 
+              "emoji": "🔥",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 3, 
+      "name": "动漫台词", 
+      "type": "quote",
+      "icon": "fas fa-comment-dots", 
+      "color": "rgba(255, 105, 180, 0.7)",
+      "glowColor": "rgba(255, 105, 180, 0.5)",
+      "subcategories": [
+        {
+          "id": 31,
+          "name": "热血台词",
+          "icon": "fas fa-fire-alt",
+          "questions": [
+            { 
+              "question": "「我要成为海贼王！」这句话出自哪个角色？", 
+              "answer": "蒙奇·D·路飞（《海贼王》）", 
+              "emoji": "🏴‍☠️",
+              "type": "normal",
+              "clubTip": "我们社团有海贼王主题的台词模仿比赛哦！"
+            },
+            { 
+              "question": "「我是要成为火影的男人！」这句话是谁说的？", 
+              "answer": "漩涡鸣人（《火影忍者》）", 
+              "emoji": "🍥",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "经典名言",
+          "icon": "fas fa-quote-right",
+          "questions": [
+            { 
+              "question": "「真相永远只有一个！」是哪个动漫角色的名言？", 
+              "answer": "江户川柯南（《名侦探柯南》）", 
+              "emoji": "🔍",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "「只要有你想保护的东西，那就拔剑吧！」出自哪部动画？", 
+              "answer": "《斩·赤红之瞳！》", 
+              "emoji": "🗡️",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 4, 
+      "name": "声优（配音）", 
+      "type": "seiyuu",
+      "icon": "fas fa-microphone", 
+      "color": "rgba(76, 217, 100, 0.7)",
+      "glowColor": "rgba(76, 217, 100, 0.5)",
+      "subcategories": [
+        {
+          "id": 41,
+          "name": "男性声优",
+          "icon": "fas fa-male",
+          "questions": [
+            { 
+              "question": "被称为「后宫王」的声优是谁？", 
+              "answer": "松冈祯丞（为多个后宫动漫男主角配音）", 
+              "emoji": "👑",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "为《火影忍者》中佐助配音的声优还为哪个角色配过音？", 
+              "answer": "柿原彻也（同时为《妖精的尾巴》纳兹配音）", 
+              "emoji": "🦁",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "女性声优",
+          "icon": "fas fa-female",
+          "questions": [
+            { 
+              "question": "为《海贼王》中路飞配音的声优是谁？", 
+              "answer": "田中真弓", 
+              "emoji": "🗣️",
+              "type": "normal",
+              "clubTip": "我们社团有专门的配音爱好者小组哦！"
+            },
+            { 
+              "question": "为初音未来提供原声的声优是谁？", 
+              "answer": "藤田咲", 
+              "emoji": "🎤",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 5, 
+      "name": "漫画知识", 
+      "type": "manga",
+      "icon": "fas fa-book-open", 
+      "color": "rgba(255, 165, 0, 0.7)",
+      "glowColor": "rgba(255, 165, 0, 0.5)",
+      "subcategories": [
+        {
+          "id": 51,
+          "name": "少年漫画",
+          "icon": "fas fa-child",
+          "questions": [
+            { 
+              "question": "《周刊少年Jump》上连载最久的漫画是哪一部？", 
+              "answer": "《乌龙派出所》（连载40年）", 
+              "emoji": "📚",
+              "type": "normal",
+              "clubTip": "社团有漫画借阅角，欢迎来交流！"
+            },
+            { 
+              "question": "《龙珠》的作者是谁？", 
+              "answer": "鸟山明", 
+              "emoji": "🐉",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "漫画历史",
+          "icon": "fas fa-history",
+          "questions": [
+            { 
+              "question": "「漫画之神」指的是哪位漫画家？", 
+              "answer": "手冢治虫（《铁臂阿童木》作者）", 
+              "emoji": "👑",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "《进击的巨人》漫画最终卷发售于哪一年？", 
+              "answer": "2021年", 
+              "emoji": "巨人",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 6, 
+      "name": "Cosplay", 
+      "type": "cosplay",
+      "icon": "fas fa-mask", 
+      "color": "rgba(138, 43, 226, 0.7)",
+      "glowColor": "rgba(138, 43, 226, 0.5)",
+      "subcategories": [
+        {
+          "id": 61,
+          "name": "基础常识",
+          "icon": "fas fa-info-circle",
+          "questions": [
+            { 
+              "question": "Cosplay一词来源于哪两个英文单词的组合？", 
+              "answer": "Costume（服装）和Play（扮演）", 
+              "emoji": "👗",
+              "type": "normal",
+              "clubTip": "我们社团定期举办cosplay摄影活动！"
+            },
+            { 
+              "question": "「正片」在cosplay术语中是什么意思？", 
+              "answer": "指coser穿着服装进行的正式摄影作品", 
+              "emoji": "📸",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "name": "漫展相关",
+          "icon": "fas fa-globe-asia",
+          "questions": [
+            { 
+              "question": "世界上最大的漫展之一Comic Market（CM）举办地在哪里？", 
+              "answer": "日本东京", 
+              "emoji": "🏙️",
+              "type": "normal",
+              "clubTip": ""
+            },
+            { 
+              "question": "制作cosplay道具常用的材料是什么？", 
+              "answer": "EVA泡沫、热缩片、PVC板等", 
+              "emoji": "🛠️",
+              "type": "normal",
+              "clubTip": "社团有道具制作大佬可以请教哦！"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
