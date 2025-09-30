@@ -34,8 +34,17 @@ const containerClasses = computed(() => {
   position: relative;
   width: 100vw;
   height: 200vh;
-  transform-origin: 50% 100vh;
+  transform-origin: center;
   transition: transform 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* 旋转180度 - Z轴旋转 */
+.dual-city-container.flipped {
+  transform: rotate(180deg);
+}
+
+/* 过渡动画状态 */
+.dual-city-container.transitioning {
+  pointer-events: none;
+}
 </style>

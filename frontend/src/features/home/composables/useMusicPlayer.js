@@ -7,16 +7,16 @@ let musicPlayerInstance = null
 // 歌单数据
 const playlists = {
     zero: [
-        { title: "サターン", artist: "ずっと真夜中でいいのに。", duration: 245, file: "/src/assets/audio/サターン (土星).mp3", cover: "images/covers/土星.png" },
-        { title: "Dear Mr F", artist: "ずっと真夜中でいいのに。", duration: 198, file: "/src/assets/audio/DearMrF.mp3", cover: "images/covers/亲爱的F先生.png" },
-        { title: "秒針を噛む", artist: "ずっと真夜中でいいのに。", duration: 267, file: "/src/assets/audio/秒針を噛む.mp3", cover: "images/covers/土星.png" },
-        { title: "眩しいDNAだけ", artist: "ずっと真夜中でいいのに。", duration: 223, file: "/src/assets/audio//眩しいDNAだけ.mp3", cover: "images/covers/只是耀眼的DNA.png" }
+        { title: "サターン", artist: "ずっと真夜中でいいのに。", duration: 245, file: "/audio/サターン (土星).mp3", cover: "/images/covers/土星.png" },
+        { title: "Dear Mr F", artist: "ずっと真夜中でいいのに。", duration: 198, file: "/audio/DearMrF.mp3", cover: "/images/covers/亲爱的F先生.png" },
+        { title: "秒針を噛む", artist: "ずっと真夜中でいいのに。", duration: 267, file: "/audio/秒針を噛む.mp3", cover: "/images/covers/土星.png" },
+        { title: "眩しいDNAだけ", artist: "ずっと真夜中でいいのに。", duration: 223, file: "/audio/眩しいDNAだけ.mp3", cover: "/images/covers/只是耀眼的DNA.png" }
     ],
     suhui: [
-        { title: "花に亡霊", artist: "ヨルシカ", duration: 210, file: "/src/assets/audio//花に亡霊.mp3", cover: "images/covers/花上亡灵.png" },
-        { title: "嘘月", artist: "ヨルシカ", duration: 234, file: "/src/assets/audio//嘘月.mp3", cover: "images/covers/嘘月.png" },
-        { title: "思想犯", artist: "ヨルシカ", duration: 289, file: "/src/assets/audio//思想犯.mp3", cover: "images/covers/思想犯.png" },
-        { title: "だから僕は音楽を辞めた", artist: "ヨルシカ", duration: 256, file: "/src/assets/audio//だから僕は音楽を辞めた.mp3", cover: "images/covers/所以我放弃了音乐.png" }
+        { title: "花に亡霊", artist: "ヨルシカ", duration: 210, file: "/audio/花に亡霊.mp3", cover: "/images/covers/花上亡灵.png" },
+        { title: "嘘月", artist: "ヨルシカ", duration: 234, file: "/audio/嘘月.mp3", cover: "/images/covers/嘘月.png" },
+        { title: "思想犯", artist: "ヨルシカ", duration: 289, file: "/audio/思想犯.mp3", cover: "/images/covers/思想犯.png" },
+        { title: "だから僕は音楽を辞めた", artist: "ヨルシカ", duration: 256, file: "/audio/だから僕は音楽を辞めた.mp3", cover: "/images/covers/所以我放弃了音乐.png" }
     ]
 }
 

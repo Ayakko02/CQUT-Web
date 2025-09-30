@@ -75,7 +75,7 @@ defineProps({
   transform: translateX(-50%);
   width: 100vw;
   height: 50vw;
-  background-image: url('/images/【哲风壁纸】-动漫-动漫人物-夜空.png');
+  background-image: url('../../../../public/images/【哲风壁纸】-动漫-动漫人物-夜空.png');
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
