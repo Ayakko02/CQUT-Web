@@ -15,4 +15,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  base: '/',  // 添加这一行
+  publicDir: 'public',  // 添加这一行
 })

@@ -46,17 +46,17 @@
           </button>
         </div>
         <div class="playlist-items">
-          <div
-              v-for="(song, index) in currentPlaylistSongs"
-              :key="index"
-              class="playlist-item"
-              :class="{ active: index === currentTrackIndex }"
-              @click="selectTrack(index)"
-          >
-            <div class="playlist-item-title">{{ song.title }}</div>
-            <div class="playlist-item-artist">{{ song.artist }}</div>
-          </div>
+        <div
+            v-for="(song, index) in currentPlaylistSongs"
+            :key="index"
+            class="playlist-item"
+            :class="{ active: index === currentTrackIndex }"
+            @click.stop="selectTrack(index)"
+        >
+          <div class="playlist-item-title">{{ song.title }}</div>
+          <div class="playlist-item-artist">{{ song.artist }}</div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -441,11 +441,17 @@ defineExpose({
   margin-top: 0;
 }
 
+
 /* 展开状态 */
+.playlist:not(.collapsed) .playlist-items {
+  max-height: 135px;
+  overflow-y: auto;
+  opacity: 1;
+}
 
 /* 收起状态 */
 .playlist.collapsed .playlist-items {
-  max-height: 0 !important;
+  max-height: 150px !important;
   overflow: hidden !important;
   opacity: 0;
 }

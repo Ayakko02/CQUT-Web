@@ -7,16 +7,17 @@ export function useCityTransition() {
     const isTransitioning = ref(false)
 
     const toggleCityTransition = () => {
-        // 移除防重复点击的限制
-        // if (isTransitioning.value) return  // 删除这行
+        console.log('[useCityTransition] 翻转函数被调用')
+        console.log('[useCityTransition] 翻转前 isFlipped:', isFlipped.value)
 
-        // 每次点击都更新状态
         isFlipped.value = !isFlipped.value
         isTransitioning.value = true
 
-        // 重新设置动画结束时间
+        console.log('[useCityTransition] 翻转后 isFlipped:', isFlipped.value)
+
         setTimeout(() => {
             isTransitioning.value = false
+            console.log('[useCityTransition] 动画完成')
         }, 2500)
 
         return {

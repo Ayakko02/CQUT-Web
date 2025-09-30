@@ -103,18 +103,21 @@ const musicPlayerTheme = computed(() => {
 
 // 处理翻转点击
 const handleFlipClick = () => {
+  console.log('[HomePage] 翻转按钮被点击！')
   const result = toggleCityTransition()
+  console.log('[HomePage] toggleCityTransition 返回:', result)
   if (result && result.newTheme) {
     emit('theme-change', result.newTheme)
   }
-}
+
 
 // 监听主题变化，更新公告栏主题
-watch(currentTheme, (newTheme) => {
-  console.log('[HomePage] 主题切换到:', newTheme)
-  // 这里可以添加额外的主题切换逻辑
-  emit('theme-change', newTheme)
-}, { immediate: true })
+  watch(currentTheme, (newTheme) => {
+    console.log('[HomePage] 主题切换到:', newTheme)
+    // 这里可以添加额外的主题切换逻辑
+    emit('theme-change', newTheme)
+  }, {immediate: true})
+}
 
 </script>
 
