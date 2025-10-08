@@ -53,6 +53,7 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import { useScrollControl } from '../composables/useScrollControl.js'
 
 // Props
@@ -66,6 +67,10 @@ defineProps({
     default: false
   }
 });
+
+// 路由
+const router = useRouter()
+
 
 // 使用统一滚动控制系统 - 只获取侧边栏相关的状态和方法
 const {
@@ -88,7 +93,7 @@ const goToNews = () => {
 
 const goToActivities = () => {
   console.log('跳转到活动页面')
-  // TODO: 实现页面跳转
+  router.push('/events')
 }
 
 const goToServices = () => {

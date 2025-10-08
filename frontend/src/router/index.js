@@ -1,73 +1,74 @@
-// src/router/index.js
+// frontend/src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-// 自动导入所有 views/ 下的 .vue 文件
-const modules = import.meta.glob('../views/**/*.vue')
+// 1️⃣ 导入所有路由模块
+import homeRoutes from './routes/home'
+// import aboutRoutes from './routes/about'
+// import adminRoutes from './routes/admin'
+// import communityRoutes from './routes/community'
+import eventsRoutes from './routes/events'
+// import newsRoutes from './routes/news'
+import quizRoutes from './routes/quiz'
+// import servicesRoutes from './routes/services'
 
-// 映射文件路径到路由
-const routes = Object.keys(modules).map((path) => {
-  // 提取文件名，如 '../views/Home.vue' -> 'Home'
-  const fileName = path
-    .split('/')
-    .pop()
-    .replace(/\.\w+$/, '') // 去掉扩展名
+// 2️⃣ 导入路由守卫
+import { setupRouterGuards } from './guards'
 
-  // 转换路径：/Home -> /
-  //          /About -> /about
-  //          /Admin/Dashboard -> /admin/dashboard
-  const routePath = path
-    .replace('../views', '')           // 去掉前缀
-    .replace(/\.vue$/, '')             // 去掉 .vue
-    .replace(/\/index$/i, '')          // 可选：/index -> /
-    .toLowerCase()                     // 全小写
-    .replace(/^\//, '/')               // 确保以 / 开头
-    .replace(/\/([a-z])/g, (match) => match.toUpperCase()) // 首字母大写？不，我们用小写更合理
-    // 我们决定：全部小写路由
-    .toLowerCase()
+// 3️⃣ 合并所有路由配置
+const routes = [
+  ...homeRoutes,      // 首页
+  // ...aboutRoutes,     // 关于页面
+  ...eventsRoutes,    // 活动相关
+  ...quizRoutes,      // ACGN测试
+  // ...newsRoutes,      // 新闻资讯
+  // ...communityRoutes, // 社区
+  // ...servicesRoutes,  // 服务
+  // ...adminRoutes,     // 管理后台
 
-  // 特殊处理：Home.vue 对应根路径 /
-  if (fileName === 'Home') {
-    return {
-      path: '/',
-      name: 'Home',
-      component: modules[path]
+  // 4️⃣ 404 页面（放在最后，匹配所有未定义路由）
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/Error/NotFound.vue'),
+    meta: {
+      title: '页面未找到 - CQUT动漫社'
     }
   }
+]
 
-  return {
-    path: routePath,
-    name: fileName,
-    component: modules[path]
-  }
-})
-
-// 确保 / 路由存在（如果没有 Home.vue，手动加一个）
-const hasHomeRoute = routes.some(r => r.path === '/')
-if (!hasHomeRoute) {
-  console.warn('⚠️ 未找到 Home.vue，添加默认首页')
-  routes.unshift({
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue')
-  })
-}
-
-// 添加 quiz 路由
-routes.push({
-  path: '/quiz',
-  name: 'Quiz',
-  component: () => import('../features/quiz/components/QuizApp.vue'),
-  meta: { title: 'ACGN浓度测试' }
-})
-
-// 创建路由实例
+// 5️⃣ 创建路由实例
 const router = createRouter({
-  history: createWebHistory(),
+  // 使用 HTML5 history 模式（URL不带#号）
+  history: createWebHistory(import.meta.env.BASE_URL),
+
+  // 路由配置
   routes,
-  // 滚动行为：切换路由时回到顶部
-  scrollBehavior() {
-    return { top: 0 }
+
+  // 6️⃣ 滚动行为：页面切换时的滚动位置
+  scrollBehavior(to, from, savedPosition) {
+    // 如果有保存的位置（浏览器前进后退），恢复到该位置
+    if (savedPosition) {
+      return savedPosition
+    }
+    // 如果路由有 hash（锚点），滚动到该元素
+    else if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
+    // 默认回到顶部
+    else {
+      return {
+        top: 0,
+        behavior: 'smooth'
+      }
+    }
   }
 })
 
+// 7️⃣ 设置路由守卫（从 guards.js 导入）
+setupRouterGuards(router)
+
+// 8️⃣ 导出路由实例
 export default router
