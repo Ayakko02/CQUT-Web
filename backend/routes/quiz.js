@@ -17,5 +17,25 @@ router.get('/random', (req, res) => {
 router.get('/all', (req, res) => {
   res.json(quizService.getAllQuestions());
 });
+router.get('/subcategory/:subcategoryId', (req, res) => {
+  try {
+    const { subcategoryId } = req.params;
+    console.log(`请求请求二级分类题目: ${subcategoryId}`);
+    
+    const question = quizService.getQuizQuestionBySubcategory(subcategoryId);
+    
+    if (!question) {
+      return res.status(404).json({ 
+        error: `未找到ID为${subcategoryId}的二级分类或该分类下没有题目` 
+      });
+    }
+    
+    res.json(question);
+  } catch (error) {
+    console.error('获取分类题目失败:', error);
+    res.status(500).json({ error: '获取分类题目时发生错误' });
+  }
+});
+
 
 module.exports = router;

@@ -126,6 +126,9 @@
                 @show-answer="handleShowAnswer"
                 @continue="handleContinue"
                 @back-to-subcategories="handleBackToSubcategories"
+                @update-correct-count="handleUpdateCorrectCount"
+                @update-combo="handleUpdateCombo"
+                @answer-submitted="handleAnswerSubmitted"
               />
             </div>
           </div>
@@ -204,6 +207,7 @@ const currentView = ref('categories');
 const selectedCategory = ref(null);
 const selectedSubcategory = ref(null);
 const lastSelectedCategoryId = ref(null);
+const lastSelectedSubcategoryId = ref(null);
 const categoryClickCount = ref({});
 const categories = ref([]);
 const currentQuestion = ref({ question: '', answer: '', type: 'normal', clubTip: '' });
@@ -251,7 +255,7 @@ const loadQuizData = async () => {
   try {
     loading.value = true;
     
-    // 从后端API获取数据
+    // 从后端API获取所有题目数据
     const response = await fetch(`${API_BASE_URL}/quiz/all`);
     
     if (response.ok) {
@@ -280,24 +284,59 @@ const retryLoadData = () => {
   loadQuizData();
 };
 
-// 获取随机题目
-const getRandomQuestion = async () => {
+// 从选中的二级分类获取随机题目
+const getRandomQuestionBySubcategory = async () => {
+  if (!selectedSubcategory.value) return null;
+  
   try {
-    const response = await fetch(`${API_BASE_URL}/quiz/random`);
+    const response = await fetch(
+      `${API_BASE_URL}/quiz/subcategory/${selectedSubcategory.value.id}`
+    );
+    
     if (response.ok) {
-      const question = await response.json();
-      return question;
+      return await response.json();
     } else {
-      throw new Error('API请求失败');
+      throw new Error('获取分类题目失败');
     }
   } catch (error) {
-    console.error('无法从API获取随机题目:', error);
+    console.error('无法获取分类题目:', error);
     return { 
+      id: 'error',
       question: '题目加载失败，请稍后重试', 
       answer: '网络连接问题', 
       type: 'error',
       clubTip: ''
     };
+  }
+};
+
+// 从当前二级分类中选择下一题 - 简化逻辑
+const selectNextQuestion = async () => {
+  // 每次点击下一题都重新获取随机题目
+  const question = await getRandomQuestionBySubcategory();
+  
+  if (question) {
+    currentQuestion.value = {
+      ...question,
+      // 确保有必要的字段
+      id: question.id || `question-${Date.now()}`,
+      type: question.type || 'normal'
+    };
+    showAnswer.value = false;
+    currentQuestionIndex.value++;
+    playSound('question');
+    console.log('获取到新题目:', currentQuestion.value.question);
+    return true;
+  } else {
+    currentQuestion.value = {
+      id: 'no-questions',
+      question: '没有找到题目',
+      answer: '该分类下没有可用题目',
+      type: 'error',
+      clubTip: ''
+    };
+    showAnswer.value = true;
+    return false;
   }
 };
 
@@ -489,8 +528,8 @@ const selectCategory = (category) => {
   }, 800);
 };
 
-// 二级分类选择处理
-const selectSubcategory = (subcategory) => {
+// 二级分类选择处理 - 修改为直接进入答题
+const selectSubcategory = async (subcategory) => {
   playSound('select');
   selectedSubcategory.value = subcategory;
   
@@ -504,41 +543,77 @@ const selectSubcategory = (subcategory) => {
   setTimeout(() => {
     mainCategoryScale.value = 0;
     
-    setTimeout(() => {
+    setTimeout(async () => {
+      // 重置状态
+      currentQuestionIndex.value = 0;
+      showAnswer.value = false;
+      
+      // 切换到答题界面并获取第一题
       currentView.value = 'quiz';
-      selectRandomQuestion();
+      await selectNextQuestion();
     }, 500);
   }, 500);
 };
 
-// 随机选择问题
-const selectRandomQuestion = async () => {
-  if (!selectedSubcategory.value) return;
-  
-  const question = await getRandomQuestion();
-  currentQuestion.value = question;
-  showAnswer.value = false;
-  
-  playSound('question');
-};
-
-// 答题界面操作
+// 答题界面操作 - 修改为直接获取新题目
 const handleRetryQuestion = () => {
   playSound('retry');
-  selectRandomQuestion();
+  selectNextQuestion();
 };
 
 const handleShowAnswer = () => {
   playSound('answer');
   showAnswer.value = true;
-  correctAnswers.value++;
-  
-  checkAchievements();
 };
 
 const handleContinue = () => {
   playSound('continue');
-  selectRandomQuestion();
+  selectNextQuestion();
+};
+
+// 处理答对计数更新
+const handleUpdateCorrectCount = (isCorrect) => {
+  if (isCorrect) {
+    correctAnswers.value++;
+    checkAchievements();
+  }
+};
+
+// 处理连击数更新
+const handleUpdateCombo = (data) => {
+  if (data.isCorrect) {
+    // 如果和上次是同一二级分类，连击数加1，否则重置为1
+    if (lastSelectedSubcategoryId.value === data.subcategoryId) {
+      comboCount.value++;
+    } else {
+      comboCount.value = 1;
+    }
+    lastSelectedSubcategoryId.value = data.subcategoryId;
+    
+    // 每3连击显示一次弹窗
+    if (comboCount.value % 3 === 0) {
+      showComboPopup(comboCount.value);
+    }
+  } else {
+    // 答错时重置连击数
+    comboCount.value = 0;
+    lastSelectedSubcategoryId.value = null;
+  }
+};
+
+// 处理题目回答后的逻辑
+const handleAnswerSubmitted = (questionId, isCorrect) => {
+  // 更新连击数
+  if (isCorrect) {
+    handleUpdateCombo({
+      isCorrect: true,
+      subcategoryId: selectedSubcategory.value.id
+    });
+  } else {
+    handleUpdateCombo({
+      isCorrect: false
+    });
+  }
 };
 
 // 返回按钮处理
