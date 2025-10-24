@@ -1,529 +1,182 @@
 {
   "categories": [
-    {
-      "id": 1,
-      "name": "二游类",
-      "type": "mobile-games",
-      "icon": "fas fa-gamepad",
-      "color": "rgba(153, 102, 255, 0.7)",
-      "glowColor": "rgba(153, 102, 255, 0.5)",
+    { 
+      "id": 1, 
+      "name": "动漫知识", 
+      "type": "anime",
+      "icon": "fas fa-film", 
+      "color": "rgba(94, 23, 235, 0.7)",
+      "glowColor": "rgba(94, 23, 235, 0.5)",
       "subcategories": [
         {
-          "id": 101,
-          "name": "重返未来：1999",
-          "icon": "fas fa-clock",
-          "questions": [
-            {
-              "question": "在游戏《重返未来：1999》中，有神秘学家，意识唤醒者，人类等种族，请问以下哪一个角色不是人类",
-              "options": ["维尔汀", "APPLe先生", "十四行诗", "星锑"],
-              "correctOptionIndex": 1,
-              "emoji": "🕰️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "在游戏《重返未来：1999》中，“暴雨”是推动剧情进展的核心设定，请问游戏中的“暴雨”是指什么",
-              "options": ["一场特大洪水", "一种能抹除时代和文明的神秘现象", "一种强腐蚀性酸雨", "反派释放的毒气"],
-              "correctOptionIndex": 1,
-              "emoji": "🌧️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "在游戏《重返未来：1999》中，主角“维尔汀”的职业是什么？",
-              "options": ["旅行者", "司辰", "漂泊者", "博士"],
-              "correctOptionIndex": 1,
-              "emoji": "🎭",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "在游戏《重返未来：1999》中，角色“APPLe”先生是一个？",
-              "options": ["机器人", "真正的苹果", "戴着苹果头套的人", "手机"],
-              "correctOptionIndex": 0,
-              "emoji": "🍎",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "\"孤独之歌\"作为重返未来：1999的重要剧情转折点，其中研发出的\"平衡伞\"标志着人类从此拥有了对抗暴雨的能力。请问平衡伞中的术式绳结名为",
-              "options": ["“最初的圆”", "37-露西结", "琼斯多项式结", "霍夫曼结"],
-              "correctOptionIndex": 1,
-              "emoji": "🧩",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "每个游戏都有自己的看板娘，如《明日方舟》的阿米娅，《鸣潮》的秧秧，请问《重返未来：1999》的看板娘是__________。",
-              "answer": "维尔汀",
-              "emoji": "💃",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "在游戏《重返未来：1999》中，通常会回溯到1999年以前，但是在海岛版本主角团重返过头到了2000年之后，请问主角团去到了哪一年？",
-              "answer": "2005年",
-              "emoji": "⏳",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "游戏《明日方舟》中有一位角色名为“玛恩纳”，因其极高的强度使得依赖他的玩家被戏称为玛宝男，游戏《重返未来：1999》中也有一位马姓角色，因为其仅有305的暴击技巧使其在社区中不断被乳，请问这位角色的名字是？",
-              "answer": "马库斯",
-              "emoji": "🐎",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "\"汤达人\"原为一泡面品牌，在游戏中常用于形容那些每个版本都能因为新更新的角色或机制得到加强的角色，请问在游戏《重返未来：1999》中被公认的汤达人是？",
-              "answer": "红弩箭",
-              "emoji": "🍜",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "《重返未来：1999》每年新春、周年庆、箱中巡游版本均会推出一名“限定”角色。请问游戏中两位新春限定角色的名字分别是？",
-              "answer": "百夫长、泥鯭的士",
-              "emoji": "🏮",
-              "type": "normal",
-              "clubTip": ""
-            }
-          ]
-        },
-        {
-          "id": 102,
-          "name": "Fate/Grand Order（FGO）",
+          "id": 11,
+          "name": "热血战斗",
           "icon": "fas fa-fist-raised",
           "questions": [
-            {
-              "question": "fgo序章在迦勒底，灵子转移召集了可能的候补master，玩家扮演的是第几位候补?",
-              "options": ["084", "048", "036", "063"],
-              "correctOptionIndex": 1,
-              "emoji": "🎮",
-              "type": "choice",
-              "clubTip": ""
+            { 
+              "question": "《进击的巨人》中艾伦的巨人叫什么名字？", 
+              "answer": "进击的巨人、始祖巨人、战锤巨人（继承后）", 
+              "emoji": "😎",
+              "type": "normal",
+              "clubTip": "我们社团曾办过《进击的巨人》观影会，下次活动记得来哦！"
             },
-            {
-              "question": "以下哪个名字是英灵“烟雾镜”在fgo内的译名？",
-              "options": ["特诺奇蒂特兰", "伊斯卡利", "特斯卡特利波卡", "库库尔坎"],
-              "correctOptionIndex": 2,
-              "emoji": "🔮",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "下面哪个没有为fgo7大职介的角色都配过音的声优",
-              "options": ["浅川悠", "斋藤千和", "川澄绫子", "坂本真绫"],
-              "correctOptionIndex": 3,
-              "emoji": "🎭",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "谜之代行者C.I.E.L希耶尔持有的是哪三个原理血戒",
-              "options": ["弗洛夫", "黑翼公", "剑祖", "萝洁安", "城祖", "白翼公"],
-              "multipleCorrectIndices": [0, 2, 4],
-              "emoji": "💍",
-              "type": "multiple-choice",
-              "clubTip": ""
-            },
-            {
-              "question": "fgo在1.7巴比伦特异点中，睡觉的吉尔伽美什就那样死亡了。死因是什么?",
-              "answer": "过劳死",
-              "emoji": "💤",
+            { 
+              "question": "《火影忍者》中漩涡鸣人的父亲是谁？", 
+              "answer": "波风水门（第四代火影）", 
+              "emoji": "👨‍👦",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "fgo 第一个实装的 avenger 从者是下列哪位",
-              "answer": "岩窟王",
-              "emoji": "👑",
+            { 
+              "question": "《鬼灭之刃》中灶门炭治郎的日轮刀是什么颜色？", 
+              "answer": "黑色", 
+              "emoji": "🔥",
+              "type": "normal",
+              "clubTip": "我们社团有成员cos过炭治郎，超还原！"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "校园日常",
+          "icon": "fas fa-school",
+          "questions": [
+            { 
+              "question": "《月刊少女野崎君》中野崎梅太郎的隐藏身份是什么？", 
+              "answer": "知名少女漫画家梦野咲子", 
+              "emoji": "📝",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "中国异闻带是第二部第几章",
-              "answer": "2.3",
-              "emoji": "🏯",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "fsn 线没做什么会被 saber打晕",
-              "answer": "不给吃午饭",
-              "emoji": "🍚",
+            { 
+              "question": "《辉夜大小姐想让我告白》的故事发生在哪个学校？", 
+              "answer": "秀知院学园", 
+              "emoji": "💌",
               "type": "normal",
               "clubTip": ""
             }
           ]
         },
         {
-          "id": 103,
-          "name": "原神",
-          "icon": "fas fa-mountain",
+          "id": 13,
+          "name": "科幻作品",
+          "icon": "fas fa-rocket",
           "questions": [
-            {
-              "question": "旧蒙德的所在地是哪里？",
-              "answer": "风龙废墟",
-              "emoji": "🏰",
+            { 
+              "question": "《攻壳机动队》中主角草薙素子的身体是什么状态？", 
+              "answer": "全身义体化", 
+              "emoji": "🤖",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "旧蒙德的统治者是谁？",
-              "answer": "龙卷之魔神迭卡拉庇安",
-              "emoji": "🌪️",
+            { 
+              "question": "《EVA》中凌波丽的经典台词是什么？", 
+              "answer": "我会驾驶EVA", 
+              "emoji": "😐",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 2, 
+      "name": "游戏知识", 
+      "type": "game",
+      "icon": "fas fa-gamepad", 
+      "color": "rgba(0, 183, 255, 0.7)",
+      "glowColor": "rgba(0, 183, 255, 0.5)",
+      "subcategories": [
+        {
+          "id": 21,
+          "name": "主机游戏",
+          "icon": "fas fa-tv",
+          "questions": [
+            { 
+              "question": "《塞尔达传说：旷野之息》中 Link 的初始武器是什么？", 
+              "answer": "树枝", 
+              "emoji": "🌿",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "璃月的海灯节是为了纪念哪位逝去的仙人？",
-              "answer": "移霄导天真君",
-              "emoji": "🏮",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "雪山古国的全名是什么？",
-              "answer": "沙尔芬德尼尔",
-              "emoji": "🏔️",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "坎瑞亚的王朝名和代表符号是什么",
-              "answer": "黑日王朝，凯尔特三角",
-              "emoji": "☀️",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "雷电五传分别是哪五个？",
-              "answer": "天目，经津，一心，百目，千手",
+            { 
+              "question": "《最终幻想7》中克劳德的标志性武器是什么？", 
+              "answer": "破坏剑", 
               "emoji": "⚔️",
               "type": "normal",
               "clubTip": ""
-            },
-            {
-              "question": "赤王和花神的真名叫什么？",
-              "answer": "赤王名为阿赫玛尔，花神名为娜布·玛莉卡塔",
-              "emoji": "👑",
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "手机游戏",
+          "icon": "fas fa-mobile-alt",
+          "questions": [
+            { 
+              "question": "《原神》中旅行者的原名是什么？", 
+              "answer": "空（男）/荧（女）", 
+              "emoji": "✨",
               "type": "normal",
-              "clubTip": ""
+              "clubTip": "社团经常举办原神联机活动，一起来玩吧！"
             },
-            {
-              "question": "现任火神玛薇卡的魔神名叫什么？",
-              "answer": "赫布里穆",
+            { 
+              "question": "《王者荣耀》中哪个英雄是基于《火影忍者》中的角色设计的？", 
+              "answer": "不知火舞", 
               "emoji": "🔥",
               "type": "normal",
               "clubTip": ""
             }
           ]
-        },
-        {
-          "id": 104,
-          "name": "崩坏学院系列",
-          "icon": "fas fa-bolt",
-          "questions": [
-            {
-              "question": "琪亚娜变成空之律者后，是怎么恢复意识的？",
-              "options": ["被芽衣的爱唤醒", "姬子用药剂唤醒", "自我苏醒"],
-              "correctOptionIndex": 1,
-              "emoji": "💊",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "布洛尼娅与希儿的cp组合名",
-              "options": ["绀海组", "碧海组", "绀蓝组"],
-              "correctOptionIndex": 0,
-              "emoji": "💙",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "梅比乌斯的助手是",
-              "options": ["克莱茵", "科莉拉", "科斯魔"],
-              "correctOptionIndex": 0,
-              "emoji": "🔬",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "作为律者之耻的风之律者的名字是",
-              "options": ["温莲", "贝蒂", "温蒂"],
-              "correctOptionIndex": 2,
-              "emoji": "🌬️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "雷之律者召唤的龙原本是哪个律者的",
-              "options": ["理之律者", "支配之律者", "空之律者"],
-              "correctOptionIndex": 2,
-              "emoji": "⚡",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "姬子阿姨爱喝酒的原因",
-              "options": ["纯馋", "止痛", "被迫"],
-              "correctOptionIndex": 1,
-              "emoji": "🍶",
-              "type": "choice",
-              "clubTip": ""
-            }
-          ]
-        },
-        {
-          "id": 105,
-          "name": "崩坏星穹轨道",
-          "icon": "fas fa-rocket",
-          "questions": [
-            {
-              "question": "能免疫一次伤害的怪物，真正的“存护星神”是",
-              "options": ["奇诡砂金", "杰帕德", "自动机兵.甲虫（红绿灯）"],
-              "correctOptionIndex": 2,
-              "emoji": "🛡️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "翻垃圾桶的小浣熊是哪个角色的动物塑",
-              "options": ["开拓者", "漆黑的虎克大人", "龙尊歼2000"],
-              "correctOptionIndex": 0,
-              "emoji": "🦝",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "老寒腿叔叔是",
-              "options": ["瓦尔特", "桑博", "加拉赫"],
-              "correctOptionIndex": 1,
-              "emoji": "🦵",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "白厄踏上了多少次轮回",
-              "options": ["33550336", "23550336", "13550336"],
-              "correctOptionIndex": 0,
-              "emoji": "🔄",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "\"呜…呜哇！这、这是…好大、好蓝的屋顶呀！\"出自",
-              "options": ["虎克做梦睡醒", "虎克第一次来到上城区", "虎克的宝藏"],
-              "correctOptionIndex": 1,
-              "emoji": "👧",
-              "type": "choice",
-              "clubTip": ""
-            }
-          ]
-        },
-        {
-          "id": 106,
-          "name": "鸣潮",
-          "icon": "fas fa-wave-square",
-          "questions": [
-            {
-              "question": "索拉里斯最强共鸣者是对哪位角色的戏称",
-              "options": ["卡卡罗", "凌阳", "忌炎"],
-              "correctOptionIndex": 0,
-              "emoji": "🌟",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "雪豹闭嘴，是哪个角色的梗",
-              "options": ["守岸人", "椿", "凌阳"],
-              "correctOptionIndex": 2,
-              "emoji": "🐆",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "小土豆是那位角色",
-              "options": ["卡提希娅", "柯莱塔", "坎特蕾拉"],
-              "correctOptionIndex": 1,
-              "emoji": "🥔",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "曾经被全世界遗忘过的角色",
-              "options": ["神秘写信女，秧秧", "神秘女特务，吟霖", "尤诺"],
-              "correctOptionIndex": 2,
-              "emoji": "失忆",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "今州岁主角所掌握的权能",
-              "options": ["同化", "时序", "狂欢"],
-              "correctOptionIndex": 1,
-              "emoji": "⏳",
-              "type": "choice",
-              "clubTip": ""
-            }
-          ]
-        },
-        {
-          "id": 107,
-          "name": "绝区零",
-          "icon": "fas fa-bomb",
-          "questions": [
-            {
-              "question": "星见雅身高是多少（含耳朵）",
-              "answer": "170cm",
-              "emoji": "📏",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "雅课长最喜欢的食物是什么",
-              "answer": "蜜瓜",
-              "emoji": "🍈",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "艾莲的外号是",
-              "answer": "圆鲨鲨",
-              "emoji": "🦈",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "在最开服爆火的11号“战歌”是什么",
-              "answer": "玛卡巴",
-              "emoji": "🎵",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "大师姐橘福福是什么希人",
-              "answer": "当然是虎希人了，才不是橘猫希人",
-              "emoji": "🐯",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "名词解释：大雷音寺",
-              "answer": "振宇和水熊的肘击之战，涉及大雷、小雷、水熊、振宇、成女、少女、体型等元素",
-              "emoji": "解释",
-              "type": "explanation",
-              "clubTip": ""
-            },
-            {
-              "question": "名词解释：绝区一",
-              "answer": "在开服时出过很大的节奏，走格子游戏的无聊等引起大量玩家退坑，在1.4版本进行了大量更新、送了大量福利等，堪比开服，史称绝区一",
-              "emoji": "解释",
-              "type": "explanation",
-              "clubTip": ""
-            }
-          ]
         }
       ]
     },
-    {
-      "id": 2,
-      "name": "热门游戏类",
-      "type": "popular-games",
-      "icon": "fas fa-gamepad",
-      "color": "rgba(54, 162, 235, 0.7)",
-      "glowColor": "rgba(54, 162, 235, 0.5)",
+    { 
+      "id": 3, 
+      "name": "动漫台词", 
+      "type": "quote",
+      "icon": "fas fa-comment-dots", 
+      "color": "rgba(255, 105, 180, 0.7)",
+      "glowColor": "rgba(255, 105, 180, 0.5)",
       "subcategories": [
         {
-          "id": 201,
-          "name": "第五人格",
-          "icon": "fas fa-user-secret",
+          "id": 31,
+          "name": "热血台词",
+          "icon": "fas fa-fire-alt",
           "questions": [
-            {
-              "question": "涂鸦\"隔桥相望的两人\"指的是哪两个角色？",
-              "answer": "杰克和园丁",
-              "emoji": "🎨",
+            { 
+              "question": "「我要成为海贼王！」这句话出自哪个角色？", 
+              "answer": "蒙奇·D·路飞（《海贼王》）", 
+              "emoji": "🏴‍☠️",
               "type": "normal",
-              "clubTip": ""
+              "clubTip": "我们社团有海贼王主题的台词模仿比赛哦！"
             },
-            {
-              "question": "飞轮效应无法规避以下哪种伤害",
-              "options": ["身上有刺，破轮使用戏谑", "祭祀大洞，监管普攻残影", "噩梦凝视，噩梦使用飞掠", "相中世界，伤害投射现实"],
-              "correctOptionIndex": 0,
-              "emoji": "⚙️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "关于挽留（一刀），下列说法正确的是",
-              "options": ["挽留状态下普攻命中求生未使用自身技能的必定使其倒地", "假设普攻伤害为0.5，挽留与恐惧震慑同时触发造成的总伤害为2", "博士的冲刺、小丑火箭冲刺、噩梦飞掠、鹿头的钩子命中均不会触发挽留效果", "挽留状态下，自身移速提升5%"],
-              "correctOptionIndex": 2,
-              "emoji": "🔪",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "比较以下三张地图的总大小：军工厂，红教堂，月亮河公园。",
-              "answer": "月亮河公园 > 红教堂 > 军工厂",
-              "emoji": "🗺️",
+            { 
+              "question": "「我是要成为火影的男人！」这句话是谁说的？", 
+              "answer": "漩涡鸣人（《火影忍者》）", 
+              "emoji": "🍥",
               "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "小说家比正常修机速度的求生者完整修一台机子的时间：",
-              "options": ["略短", "略长", "一致"],
-              "correctOptionIndex": 1,
-              "emoji": "📖",
-              "type": "choice",
               "clubTip": ""
             }
           ]
         },
         {
-          "id": 202,
-          "name": "饥荒",
-          "icon": "fas fa-seedling",
+          "id": 32,
+          "name": "经典名言",
+          "icon": "fas fa-quote-right",
           "questions": [
-            {
-              "question": "威尔逊的胡子能提供多少保暖值？",
-              "answer": "135秒的保暖时间，相当于1.5个暖石的保暖效果",
-              "emoji": "🧔",
+            { 
+              "question": "「真相永远只有一个！」是哪个动漫角色的名言？", 
+              "answer": "江户川柯南（《名侦探柯南》）", 
+              "emoji": "🔍",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "薇洛的小熊在什么条件下会变大？",
-              "answer": "当薇洛精神值过低时，小熊会变大并保护她",
-              "emoji": "🧸",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "沃尔夫冈怎么增加肌肉值？",
-              "answer": "通过进食来增加肌肉值，肌肉值越高，战斗力越强",
-              "emoji": "💪",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "温蒂和阿比盖尔是什么样的关系？",
-              "answer": "姐妹关系，阿比盖尔是温蒂已故的姐姐",
-              "emoji": "👯",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "WX-78吃齿轮恢复多少血量？",
-              "answer": "每个齿轮恢复40点生命值",
-              "emoji": "🤖",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "如何制作肉丸？",
-              "answer": "1个肉（或鸟肉、怪物肉）+ 3个浆果（或蔬菜）在烹饪锅里制作",
-              "emoji": "🍖",
+            { 
+              "question": "「只要有你想保护的东西，那就拔剑吧！」出自哪部动画？", 
+              "answer": "《斩·赤红之瞳！》", 
+              "emoji": "🗡️",
               "type": "normal",
               "clubTip": ""
             }
@@ -531,195 +184,157 @@
         }
       ]
     },
-    {
-      "id": 3,
-      "name": "桌游/棋牌类",
-      "type": "board-games",
-      "icon": "fas fa-chess-board",
-      "color": "rgba(75, 192, 192, 0.7)",
-      "glowColor": "rgba(75, 192, 192, 0.5)",
+    { 
+      "id": 4, 
+      "name": "声优（配音）", 
+      "type": "seiyuu",
+      "icon": "fas fa-microphone", 
+      "color": "rgba(76, 217, 100, 0.7)",
+      "glowColor": "rgba(76, 217, 100, 0.5)",
       "subcategories": [
         {
-          "id": 301,
-          "name": "麻将",
-          "icon": "fas fa-tile",
+          "id": 41,
+          "name": "男性声优",
+          "icon": "fas fa-male",
           "questions": [
-            {
-              "question": "最早的古典麻将中没有一下哪个番种：",
-              "options": ["平和", "自摸", "天和", "单钓"],
-              "correctOptionIndex": 0,
-              "emoji": "🀄",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "在国标麻将中有几种特殊和牌牌型（不是四个面子加一个雀头的和牌牌型）",
-              "options": ["1", "2", "3", "4"],
-              "correctOptionIndex": 2,
-              "emoji": "🀄",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "在国内被称为“日麻（日本麻将）圣经”的是以下那本书：",
-              "options": ["《79博客》", "《雀魂绝艺总纲》", "《牌效率》", "《统计学麻雀战术》"],
-              "correctOptionIndex": 0,
-              "emoji": "📚",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "麻将中老头牌是指哪些牌",
-              "options": ["1和9的数牌", "1和9的数牌及字牌", "非1和9的数牌", "字牌"],
-              "correctOptionIndex": 0,
-              "emoji": "🀄",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "日麻中混一色的番数是多少",
-              "options": ["1", "2", "3", "4"],
-              "correctOptionIndex": 2,
-              "emoji": "🀄",
-              "type": "choice",
-              "clubTip": ""
-            }
-          ]
-        },
-        {
-          "id": 302,
-          "name": "三国杀",
-          "icon": "fas fa-shield-alt",
-          "questions": [
-            {
-              "question": "三国历史中，曹操“挟天子以令诸侯”，这里的天子是？",
-              "options": ["刘辨", "刘烨", "刘宏", "刘协"],
-              "correctOptionIndex": 3,
+            { 
+              "question": "被称为「后宫王」的声优是谁？", 
+              "answer": "松冈祯丞（为多个后宫动漫男主角配音）", 
               "emoji": "👑",
-              "type": "choice",
+              "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "当张春华一套爆发打死蔡文姬后，请问张春华是否会失去技能？",
-              "options": ["会", "不会", "看运气", "不知道"],
-              "correctOptionIndex": 1,
-              "emoji": "💀",
-              "type": "choice",
+            { 
+              "question": "为《火影忍者》中佐助配音的声优还为哪个角色配过音？", 
+              "answer": "柿原彻也（同时为《妖精的尾巴》纳兹配音）", 
+              "emoji": "🦁",
+              "type": "normal",
               "clubTip": ""
-            },
-            {
-              "question": "三国杀中被称为大嘴的武将是？",
-              "options": ["祢衡", "留赞", "曹操", "袁绍"],
-              "correctOptionIndex": 3,
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "女性声优",
+          "icon": "fas fa-female",
+          "questions": [
+            { 
+              "question": "为《海贼王》中路飞配音的声优是谁？", 
+              "answer": "田中真弓", 
               "emoji": "🗣️",
-              "type": "choice",
-              "clubTip": ""
+              "type": "normal",
+              "clubTip": "我们社团有专门的配音爱好者小组哦！"
             },
-            {
-              "question": "满血的夏侯惇自己杀小乔被天香，夏侯惇发动刚烈并判定生效，请问可能会发生以下哪种情况？",
-              "options": ["小乔弃两张牌", "小乔掉血", "小乔再次天香给夏侯惇", "夏侯惇掉血"],
-              "correctOptionIndex": 3,
-              "emoji": "⚔️",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "满血界黄盖发动诈降弃白银狮子，他的血量怎样？",
-              "options": ["不变", "减一血", "不确定", "不知道"],
-              "correctOptionIndex": 1,
-              "emoji": "🩸",
-              "type": "choice",
+            { 
+              "question": "为初音未来提供原声的声优是谁？", 
+              "answer": "藤田咲", 
+              "emoji": "🎤",
+              "type": "normal",
               "clubTip": ""
             }
           ]
         }
       ]
     },
-    {
-      "id": 4,
-      "name": "东方Project",
-      "type": "touhou",
-      "icon": "fas fa-moon",
-      "color": "rgba(255, 99, 132, 0.7)",
-      "glowColor": "rgba(255, 99, 132, 0.5)",
+    { 
+      "id": 5, 
+      "name": "漫画知识", 
+      "type": "manga",
+      "icon": "fas fa-book-open", 
+      "color": "rgba(255, 165, 0, 0.7)",
+      "glowColor": "rgba(255, 165, 0, 0.5)",
       "subcategories": [
         {
-          "id": 401,
-          "name": "东方Project综合",
-          "icon": "fas fa-star",
+          "id": 51,
+          "name": "少年漫画",
+          "icon": "fas fa-child",
           "questions": [
-            {
-              "question": "月面战争爆发过几次",
-              "answer": "2次",
-              "emoji": "🌕",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "在幻想乡内的道教势力有＿＿＿＿",
-              "answer": "命莲寺",
-              "emoji": "🏯",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "稗田阿求是第几代御阿礼之子",
-              "answer": "9",
+            { 
+              "question": "《周刊少年Jump》上连载最久的漫画是哪一部？", 
+              "answer": "《乌龙派出所》（连载40年）", 
               "emoji": "📚",
               "type": "normal",
-              "clubTip": ""
+              "clubTip": "社团有漫画借阅角，欢迎来交流！"
             },
-            {
-              "question": "已知的贤者除了八云紫还有谁",
-              "answer": "摩多罗隐岐奈/茨木华扇",
-              "emoji": "🧙",
+            { 
+              "question": "《龙珠》的作者是谁？", 
+              "answer": "鸟山明", 
+              "emoji": "🐉",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "漫画历史",
+          "icon": "fas fa-history",
+          "questions": [
+            { 
+              "question": "「漫画之神」指的是哪位漫画家？", 
+              "answer": "手冢治虫（《铁臂阿童木》作者）", 
+              "emoji": "👑",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "🔳这会是哪个角色",
-              "answer": "露米娅",
-              "emoji": "⚫",
+            { 
+              "question": "《进击的巨人》漫画最终卷发售于哪一年？", 
+              "answer": "2021年", 
+              "emoji": "巨人",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        }
+      ]
+    },
+    { 
+      "id": 6, 
+      "name": "Cosplay", 
+      "type": "cosplay",
+      "icon": "fas fa-mask", 
+      "color": "rgba(138, 43, 226, 0.7)",
+      "glowColor": "rgba(138, 43, 226, 0.5)",
+      "subcategories": [
+        {
+          "id": 61,
+          "name": "基础常识",
+          "icon": "fas fa-info-circle",
+          "questions": [
+            { 
+              "question": "Cosplay一词来源于哪两个英文单词的组合？", 
+              "answer": "Costume（服装）和Play（扮演）", 
+              "emoji": "👗",
+              "type": "normal",
+              "clubTip": "我们社团定期举办cosplay摄影活动！"
+            },
+            { 
+              "question": "「正片」在cosplay术语中是什么意思？", 
+              "answer": "指coser穿着服装进行的正式摄影作品", 
+              "emoji": "📸",
+              "type": "normal",
+              "clubTip": ""
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "name": "漫展相关",
+          "icon": "fas fa-globe-asia",
+          "questions": [
+            { 
+              "question": "世界上最大的漫展之一Comic Market（CM）举办地在哪里？", 
+              "answer": "日本东京", 
+              "emoji": "🏙️",
               "type": "normal",
               "clubTip": ""
             },
-            {
-              "question": "芙兰朵露是被强制关在红魔馆中的吗",
-              "answer": "不是",
-              "correctAnswer": false,
-              "emoji": "🏰",
-              "type": "judge",
-              "clubTip": ""
-            },
-            {
-              "question": "以下哪个不是铃仙的称呼",
-              "options": ["Reisen", "因幡", "优昙华", "月兔"],
-              "correctOptionIndex": 2,
-              "emoji": "🐰",
-              "type": "choice",
-              "clubTip": ""
-            },
-            {
-              "question": "谁最讨厌过中秋节",
-              "answer": "纯狐",
-              "emoji": "🥮",
+            { 
+              "question": "制作cosplay道具常用的材料是什么？", 
+              "answer": "EVA泡沫、热缩片、PVC板等", 
+              "emoji": "🛠️",
               "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "橙的尾巴有＿＿＿条",
-              "answer": "2",
-              "emoji": "🐱",
-              "type": "normal",
-              "clubTip": ""
-            },
-            {
-              "question": "谁是幻想乡最强",
-              "options": ["风见幽香", "琪露诺", "八云紫", "神绮"],
-              "correctOptionIndex": 1,
-              "emoji": "⑨",
-              "type": "choice",
-              "clubTip": ""
+              "clubTip": "社团有道具制作大佬可以请教哦！"
             }
           ]
         }
