@@ -1,6 +1,7 @@
 // # 音乐播放器逻辑
 
 import {computed, ref} from 'vue'
+import { useMusicStore } from '@/stores/music'
 
 let musicPlayerInstance = null
 
@@ -44,7 +45,15 @@ export function useMusicPlayer() {
     let audio = null
 
     // 计算属性
-    const currentPlaylistSongs = computed(() => playlists[currentPlaylist.value] || [])
+    const currentPlaylistSongs = computed(() => {
+        const musicStore = useMusicStore()
+        // 先从 store 的 playlistMap 查找
+        if (musicStore.playlistMap[currentPlaylist.value]) {
+            return musicStore.playlistMap[currentPlaylist.value]
+        }
+        // 再从本地 playlists 查找
+        return playlists[currentPlaylist.value] || []
+    })
 
     const currentTrack = computed(() => {
         const songs = currentPlaylistSongs.value
@@ -206,11 +215,30 @@ export function useMusicPlayer() {
         if (newPlaylist === currentPlaylist.value) return
 
         const wasPlaying = isPlaying.value
+        const musicStore = useMusicStore()
 
         currentPlaylist.value = newPlaylist
 
+        // 获取新歌单的歌曲列表
+        let playlistSongs = []
+
+        // 首先尝试从 store 的 playlistMap 中获取（用于小程序歌单）
+        if (musicStore.playlistMap[newPlaylist]) {
+            playlistSongs = musicStore.playlistMap[newPlaylist]
+            console.log(`[MusicPlayer] 从 store 获取歌单数据: ${newPlaylist}, 歌曲数:`, playlistSongs.length)
+        }
+        // 如果 store 中没有，则从本地 playlists 中获取（用于首页歌单 zero/suhui）
+        else if (playlists[newPlaylist]) {
+            playlistSongs = playlists[newPlaylist]
+            console.log(`[MusicPlayer] 从本地获取歌单数据: ${newPlaylist}, 歌曲数:`, playlistSongs.length)
+        }
+        else {
+            console.error(`[MusicPlayer] 歌单 ${newPlaylist} 不存在！`)
+            return
+        }
+
         // 随机选择一首歌，但不与上一首重复
-        const playlistLength = currentPlaylistSongs.value.length
+        const playlistLength = playlistSongs.length
         let randomTrack = 0
 
         if (playlistLength > 1 && lastPlayedTrack.value !== -1) {
@@ -225,17 +253,26 @@ export function useMusicPlayer() {
         currentTrackIndex.value = randomTrack
 
         pause()
+
+        // ⭐ 新增：如果 audio 没有初始化，先初始化
+        if (!audio) {
+            initializeAudio()
+        }
+
         loadCurrentTrack()
         isFirstPlay.value = false
 
-        if (wasPlaying) {
-            audio.addEventListener('loadeddata', async () => {
-                await play()
-            }, { once: true })
-        }
+        console.log('[MusicPlayer] 当前音频对象:', audio)
+        console.log('[MusicPlayer] 音频src:', audio?.src)
+        console.log('[MusicPlayer] 准备自动播放...')
 
-        const themeText = newPlaylist === 'zero' ? '零域' : '溯洄'
-        console.log(`[MusicPlayer] 切换到${themeText}歌单，随机播放:`, currentTrack.value.title)
+// ⭐ 修改：无论之前是否在播放，都自动播放
+        audio.addEventListener('loadeddata', async () => {
+            console.log('[MusicPlayer] loadeddata 事件触发，开始播放')
+            await play()
+        }, { once: true })
+
+        console.log(`[MusicPlayer] 切换歌单到: ${newPlaylist}，随机播放:`, playlistSongs[randomTrack]?.title)
     }
 
     // 格式化时间

@@ -65,6 +65,8 @@
 <script setup>
 import { computed, watch, onMounted } from 'vue'
 import { useMusicPlayer } from '../composables/useMusicPlayer.js'
+import { useMusicStore } from '@/stores/music'
+
 
 // Props
 const props = defineProps({
