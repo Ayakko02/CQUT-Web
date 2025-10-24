@@ -1,5 +1,5 @@
-// # 路由守卫 - 权限验证、登录拦截
 // frontend/src/router/guards.js
+import { useMusicStore } from '@/stores/music'
 
 /**
  * 设置路由守卫
@@ -10,6 +10,21 @@ export function setupRouterGuards(router) {
     // 1️⃣ 全局前置守卫 - 在路由跳转前执行
     router.beforeEach((to, from, next) => {
         console.log(`🚀 路由跳转: ${from.path} → ${to.path}`)
+
+        // ============ 音乐上下文切换逻辑 ============
+        const musicStore = useMusicStore()
+
+        // 进入小程序页面（/quiz）
+        if (to.path === '/quiz') {
+            console.log('[RouteGuard] 进入小程序页面，切换到 miniGame 上下文')
+            musicStore.switchToMiniGameContext()
+        }
+
+        // 离开小程序页面（从 /quiz 离开）
+        if (from.path === '/quiz' && to.path !== '/quiz') {
+            console.log('[RouteGuard] 离开小程序页面，切换到 home 上下文')
+            musicStore.switchToHomeContext()
+        }
 
         // ===== 页面标题更新 =====
         updatePageTitle(to)
